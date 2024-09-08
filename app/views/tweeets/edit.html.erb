@@ -1,0 +1,19 @@
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <h1 class="title">Edit Tweet</h1>
+        
+        <!-- Render the form partial with the tweeet object -->
+        <%= render 'form', tweeet: @tweeet %>
+        
+        <!-- Position the Cancel button below the form -->
+        <div class="field is-grouped" style="margin-top: 1rem;">
+          <p class="control">
+            <%= link_to 'Cancel', tweeets_path, class: 'button is-dark' %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

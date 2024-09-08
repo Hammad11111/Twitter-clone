@@ -1,0 +1,47 @@
+<div class="section">
+  <div class="container"> <!-- Corrected the missing equals sign -->
+    <div class="columns is-centered">
+      <div class="column is-4">
+        <h2 class="title is-little" style="margin-top: -25px; font-size: 1.5rem;">Log In</h2>
+        <br/>
+
+        <%= simple_form_for(resource, as: resource_name, url: user_session_path, method: :post) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="field" style="margin-top: -10px;">
+            <div class="control">
+              <%= f.input :email, required: true, input_html: { class: 'input', style: 'font-size: 0.9rem;' }, wrapper: false, label_html: { class: 'label', style: 'font-size: 0.9rem;' } %>
+            </div>
+          </div>
+          <br/>
+
+          <div class="field" style="margin-top: -10px;">
+            <div class="control">
+              <%= f.input :password, required: true, input_html: { class: 'input', style: 'font-size: 0.9rem;' }, wrapper: false, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label_html: { class: 'label', style: 'font-size: 0.9rem;' } %>
+            </div>
+          </div>  
+          <br/>
+
+          <div class="field" style="margin-top: -10px;">
+            <div class="control">
+              <%= f.input :remember_me, as: :boolean, label: 'Remember me', input_html: { style: 'font-size: 0.9rem;' }, wrapper: false, label_html: { style: 'font-size: 0.9rem;' } %>
+            </div>
+          </div>
+          <br/>
+
+          <div class="field" style="margin-top: -10px;">
+            <div class="control">
+              
+              <%= f.button :submit, "Log In", class: 'button is-info is-small', style: 'font-size: 0.9rem;' %>
+            </div>
+          </div>  
+        <% end %>
+
+        <br/>
+
+        <%= render "devise/shared/links" %>
+
+      </div>
+    </div>
+  </div>
+</div>

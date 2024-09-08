@@ -1,0 +1,37 @@
+// app/assets/stylesheets/application.scss
+
+// Import Bulma variables first
+
+
+// Override the base font size variable
+$size: 0.875rem; // Set the desired base font size (default is 1rem)
+
+// Import Bulma after setting your custom variables
+@import "bulma";
+
+/* app/assets/stylesheets/application.scss */
+
+body {
+  font-size: 0.875rem; /* Adjust the base font size for the entire body */
+}
+
+.navbar {
+  font-size: 0.9rem; /* Slightly smaller font size for the navbar */
+}
+
+.title, .subtitle {
+  font-size: 1.25rem; /* Adjust titles separately if needed */
+}
+
+.button {
+  font-size: 0.8rem; /* Smaller font for buttons */
+}
+
+.container, .content {
+  font-size: 0.9rem; /* Apply a smaller font size to containers and content areas */
+}
+
+.consistent-font {
+  font-size: 1rem; /* or any size you need */
+}
+
